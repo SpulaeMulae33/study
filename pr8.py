@@ -1,12 +1,11 @@
 N = int(input("Input N: "))
 friends = []
-fri = {}
-temp = {}
 for i in range(N):
-    if i < N:
-        key = input()
-        value = input()
-        temp[key] = value
-        friends.append(temp)
+    name = input(f'Friend {i+1}:')
+    age = int(input(f'Age of friend {i+1}:'))
+    friend = {'name':name , 'age':age }
+    friends.append(friend)
     
-print(friends)
+friends.sort(key= lambda x: x['name'])
+for friend in friends:
+    print(friend)
